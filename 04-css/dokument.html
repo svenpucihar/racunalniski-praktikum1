@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="oblikovanje.css">
+    <meta charset="UTF-8">
+    <title>HTCPCP</title>
+</head>
+
+<body>
+    <section>
+        <h1>Hyper Text Coffee Pot Control Protocol</h1>
+
+        <p>The content of this page has been slightly adapted from the Wikipedia page on <a
+                href="https://en.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol">Hyper Text Coffee Pot
+                Control Protocol.</a></p>
+
+        <p>The <strong>Hyper Text Coffee Pot Control Protocol (HTCPCP)</strong> is a facetious communication protocol
+            for controlling, monitoring, and diagnosing coffee pots. It is specified in RFC 2324, published on 1 April
+            1998 as an April Fools' Day RFC, as part of an April Fools prank. An extension, HTCPCP-TEA, was published as
+            RFC 7168 on 1 April 2014 to support brewing teas, which is also an April Fools' Day RFC.</p>
+        <div>
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#protocol">Protocol</a></li>
+                <li><a href="#commandsreplies">Commands and replies</a></li>
+                <li><a href="#save418">Save 418 movement</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2 id="protocol">Protocol</h2>
+
+        <div>
+            <img src="Htcpcp_teapot.jpg" alt="A white teapot with a visible and a microcontroller">
+            <p>Implementation of HTCPCP at error418.net</p>
+            <p>A.cilia / <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a></p>
+        </div>
+
+        <p>RFC 2324 was written by Larry Masinter, who describes it as a satire, saying "This has a serious purpose - it
+            identifies many of the ways in which HTTP has been extended inappropriately." The wording of the protocol
+            made it clear that it was not entirely serious; for example, it notes that "there is a strong, dark, rich
+            requirement for a protocol designed espressoly [sic] for the brewing of coffee".</p>
+
+        <p>Despite the joking nature of its origins, or perhaps because of it, the protocol has remained as a minor
+            presence online. The editor Emacs includes a fully functional client side implementation of it, and a number
+            of bug reports exist complaining about Mozilla's lack of support for the protocol. Ten years after the
+            publication of HTCPCP, the Web-Controlled Coffee Consortium (WC3) published a first draft of "HTCPCP
+            Vocabulary in RDF" in parody of the World Wide Web Consortium's (W3C) "HTTP Vocabulary in RDF".</p>
+
+        <p>On April 1, 2014, RFC 7168 extended HTCPCP to fully handle teapots.</p>
+    </section>
+
+    <section>
+        <h2 id="commandsreplies">Commands and replies</h2>
+
+        <div>
+            <img src="Htcpcp_teapot.jpg" alt="A white teapot with a visible and a microcontroller">
+            <p>A Denby teapot glued to a netbook in order to provide RFC 2324-compliant (Hyper Text Coffee Pot Control Protocol) responses.</p>
+            <p><a href="http://www.cs.rhul.ac.uk/home/joseph">http://www.cs.rhul.ac.uk/home/joseph</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a></p>
+        </div>
+
+        <p>HTCPCP is an extension of HTTP. HTCPCP requests are identified with the Uniform Resource Identifier (URI)
+            scheme coffee (or the corresponding word in any other of the 29 listed languages) and contain several
+            additions to the HTTP methods:</p>
+
+        <dl>
+            <dt><code>BREW</code> or <code>POST</code></dt>
+            <dd>Causes the HTCPCP server to brew coffee. Using POST for this purpose is deprecated. A new HTTP request
+                header field "Accept-Additions" is proposed, supporting optional additions including Cream, Whole-milk,
+                Vanilla, Raspberry, Whisky, Aquavit, etc.</dd>
+            <dt><code>GET</code></dt>
+            <dd>"Retrieves" coffee from the HTCPCP server.</dd>
+            <dt><code>PROPFIND</code></dt>
+            <dd>Returns metadata about the coffee.</dd>
+            <dt><code>WHEN</code></dt>
+            <dd><a href="https://en.wiktionary.org/wiki/say_when">Says "when"</a>, causing the HTCPCP server to stop
+                pouring milk into the coffee (if applicable).</dd>
+        </dl>
+
+        <p>It also defines two error responses:</p>
+
+        <dl>
+            <dt><code>406 Not Acceptable</code></dt>
+            <dd>The HTCPCP server is unable to provide the requested addition for some reason; the response should
+                indicate a list of available additions. The RFC observes that "In practice, most automated coffee pots
+                cannot currently provide additions."</dd>
+            <dt><code>418 I'm a teapot</code></dt>
+            <dd>The HTCPCP server is a teapot; the resulting entity body "may be short and stout" (a reference to the
+                song "I'm a Little Teapot"). Demonstrations of this behaviour exist.</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2 id="save418">Save 418 movement</h2>
+
+        <p>On 5 August 2017, Mark Nottingham, chairman of the IETF HTTPBIS Working Group, called for the removal of
+            status code 418 "I'm a teapot" from the Node.js platform, a code implemented in reference to the original
+            418 "I'm a teapot" established in Hyper Text Coffee Pot Control Protocol. On 6 August 2017, Nottingham
+            requested that references to 418 "I'm a teapot" be removed from the programming language Go and subsequently
+            from Python's Requests and ASP.NET's HttpAbstractions library as well.</p>
+
+        <p>In response, 15-year-old developer Shane Brunswick created a website, save418.com, and established the "Save
+            418 Movement", asserting that references to 418 "I'm a teapot" in different projects serve as "a reminder
+            that the underlying processes of computers are still made by humans". Brunswick's site went viral in the
+            hours following its publishing, garnering thousands of upvotes on the social platform Reddit, and causing
+            the mass adoption of the "#save418" Twitter hashtag he introduced on his site. Heeding the public outcry,
+            Node.js, Go, Python's Requests, and ASP.NET's HttpAbstractions library decided against removing 418 "I'm a
+            teapot" from their respective projects. The unanimous support from the aforementioned projects and the
+            general public prompted Nottingham to begin the process of having 418 marked as a reserved HTTP status code,
+            ensuring that 418 will not be replaced by an official status code for the foreseeable future.</p>
+
+        <p>On 5 October 2020, Python 3.9 released with an updated http library including <code>418 IM_A_TEAPOT</code>
+            status code. In the corresponding pull request, the Save 418 movement was directly cited in support of
+            adoption.</p>
+    </section>
+
+</body>
+
+</html>
