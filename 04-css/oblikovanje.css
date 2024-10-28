@@ -23,6 +23,13 @@ h2 {
     width: 100%;
     height: auto;
 }
+.slika p:last-child {
+    font-size: 0.8em;
+    border-radius: 50%;
+}
+a::before {
+    content: '🔗';
+}
 body {
     /*  Barva pisave pod značko oz. oznako  */
     color: #333333; 
