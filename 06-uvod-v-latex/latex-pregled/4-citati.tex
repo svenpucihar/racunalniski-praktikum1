@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[slovene]{babel}
+
+% Ker imajo nekateri citati povezave
+\usepackage{hyperref}
+
+% Za izdelavo stvarnega kazala
+\usepackage{makeidx}
+
+% Ukaz, ki naredi stvarno kazalo, a ga ne prikaže (mora biti v preambuli)
+\makeindex
+
+\begin{document}
+
+\title{Kako citiramo literaturo\\ in naredimo stvarno kazalo}
+\author{Andrej Bauer}
+\maketitle
+
+\begin{abstract}
+  V tem članku bomo citirali vire iz literature in medmrežja.
+  Prvi nauk je, da se v povzetku nikoli ne citira literature,
+  ker je povzetek pogosto objavljen ločeno od članka.
+
+  Potem bomo pogledali še, kako se naredi stvarno kazalo.
+\end{abstract}
+
+
+\section{Kaj in kako citiramo?}
+
+Ko pišemo znanstveno ali strokovno besedilo, uporabljamo razne vire. Le-te je treba vedno
+navesti. Pravimo, da jih \emph{citiramo}. V {\LaTeX}u to naredimo z Bibtexom, ki je
+samostojen program za upravljanje z bibliografskimi podatki.
+
+V znanstveni literaturi velja, da lahko kot zanesljiv vir uporabimo \emph{recenzirana
+  dela}. Mednje štejemo predvsek članeke iz znanstvenih revij in nekaterih znanstvenih
+konferenc ter monografij z recenzijo. Seveda lahko navajamo tudi druge vire (doktorske
+disertacije, ``preprint'', članke s konferenc brez recenzije ipd.), a ti so pogosto manj
+zanesljivi kot recenzirani članki.
+\index{prostor!evklidski}%
+Na sploh moramo biti kritični in pozorni, ko se
+zanašamo na delo drugih. Mimogrede, Wikipedia je polna napak.
+
+\section{Program Bibtex}
+
+Bibliografijo damo v datoteko s končnico~\verb|.bib|. Uporabimo jo z ukazom
+\verb|\bibliography|, glej konec te datoteke. Z ukazom \verb|cite| citiramo posamezne
+enote~\cite{bauer06}, lahko več naenkrat~\cite{ersov80,lesnik10}. Če želimo citirati točno
+določen izrek v članku~\cite[Izrek~2.1]{lawvere69}, lahko naredimo tudi to.
+\index{prostor!topološki}%
+
+\section{Stvarno kazalo}
+
+Stvarno kazalo%
+\index{stvarno kazalo}%
+je malo bolj komplicirana reč. V člankih ga običajno ne uporabljamo, za daljša besedila pa
+pride prav. V tej datoteki vidite osnovno uporabo paketa \texttt{makeidx} za izdelavo
+stvarnega kazala.
+\index{prostor}%
+
+Če želite videti resno stvarno kazalo, si na primer oglejte knjigo ``Homotopy type theory:
+Univalent foundations of mathematics''~\cite{hottbook}.
+
+
+
+%% BIBLIOGRAFIJA
+%% Najprej nastavimo stil bibliografije (plain, alpha, abbrv, ...)
+\bibliographystyle{plain}
+
+%% Datoteka za Bibtex
+\bibliography{literatura}
+
+%% STVARNO KAZALO
+\printindex
+
+\end{document}
