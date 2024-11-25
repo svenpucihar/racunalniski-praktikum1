@@ -13,6 +13,8 @@
 *.pdf
 *.pyc
 *.synctex.gz
+*.snm
+*.nav
 
 # MacOS
 __MACOSX

@@ -1,0 +1,57 @@
+%  Naslov prosojnice lahko naredimo tudi z dodatnim parametrom okolja `frame`.
+\begin{frame}{Posebnosti prosojnic}
+	% Naloga 2.3.1:
+	% Dodajte ukaze, ki bodo poskrbeli, da se bo prosojnica odkrivala postopoma,
+	% tako kot v datoteki prosojnice-resitev.pdf
+
+	Za prosojnice je značilna uporaba okolja \texttt{frame},
+	s katerim definiramo posamezno prosojnico, \pause
+	%
+	postopno odkrivanje prosojnic, \pause
+	%
+	ter nekateri drugi ukazi, ki jih najdemo v paketu \texttt{beamer}. \pause
+	%
+	\begin{exampleblock}{Primer}
+		Verjetno ste že opazili, da za naslovno prosojnico niste uporabili
+		ukaza \texttt{maketitle}, ampak ukaz \texttt{titlepage}.
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Poudarjeni bloki}
+	% Naloga 2.3.2:
+	% Oblikujte poudarjena bloka z opombo in opozorilom.
+        \begin{block}{Opomba}
+		Okolja za poudarjene bloke so \texttt{block}, \texttt{exampleblock} in \texttt{alertblock}. 
+			
+		\end{block}
+        \begin{alertblock}{Pozor!}
+		Začetek poudarjenega bloka (ukaz \texttt{begin}) vedno sprejme 
+		dva parametra: okolje in naslov bloka.
+		Drugi parameter (za naslov) je lahko prazen. 
+	    \end{alertblock}
+		
+
+\end{frame}
+
+\begin{frame}{Tudi v predstavitvah lahko pišemo izreke in dokaze}
+	% Naloga 2.3.2:
+	% Oblikujte okolje itemize, tako da se bo njegova vsebina postopoma odkrivala.
+	% Ne smete uporabiti ukaza `pause'.
+	% Beseda `največje' naj bo poudarjena šele na četrti podprosojnici.
+
+	\begin{izrek}
+	   Praštevil je neskončno mnogo.
+	\end{izrek}
+	\begin{proof}
+	   Denimo, da je praštevil končno mnogo.
+	   	% S pomožnim parametrom <+-> lahko določimo, da se bodo 
+		% elementi naštevanja odkrivali postopoma.
+	   \begin{itemize}[<+->]
+		  \item Naj bo $p$ \alert<4>{največje} praštevilo.
+		  \item Naj bo $q$ produkt števil $1$, $2$, \ldots, $p$.
+		  \item Število $q+1$ ni deljivo z nobenim praštevilom, torej je $q+1$ praštevilo.
+		  \item To je protislovje, saj je $q+1>p$. \qedhere
+	   \end{itemize}
+	\end{proof}
+ \end{frame}
+ 

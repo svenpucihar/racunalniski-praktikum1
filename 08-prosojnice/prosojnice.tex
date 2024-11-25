@@ -1,0 +1,72 @@
+\documentclass{beamer}
+
+% Naloga 1.3.1: Za dokument uporabite razred `beamer'.
+% Ne dodajajte nastavitve za velikost pisave, kot je bila v datoteki `5-prosojnice.tex`.
+\usepackage{predavanja}
+% Naloga 1.3.2: vključite paket `predavanja'.
+
+{\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}[section]
+\newtheorem{posledica}[izrek]{Posledica}
+}
+{\theoremstyle{definition}
+\newtheorem{definicija}[izrek]{Definicija}
+}
+% Naloga 1.3.3: definirajte okolji `definicija' in `izrek'.
+% Namig: z iskanjem po datotekah (Ctrl+Shift+F oz. Cmd+Shift+F) 
+% poiščite niz `{definicija}' ali niz `{izrek}'.
+
+
+
+\begin{document}
+
+\title{Matematični izrazi in uporaba paketa \texttt{beamer}}
+    \subtitle{\emph{Matematičnih} nalog ni treba reševati!}
+    \institute{Fakulteta za matematiko in fiziko}
+    \date{}
+
+\frame{\titlepage}
+    
+
+
+
+% Naloga 1.3.4: pripravite naslovno stran z vsebino:
+% - naslov: Matematični izrazi in uporaba paketa \texttt{beamer}
+% - podnaslov: \emph{Matematičnih} nalog ni treba reševati!
+% - inštitut: Fakulteta za matematiko in fiziko
+% - datum: naj se ne izpiše; to dosežete z ukazom \date{}.
+% Zgornje podatke nastavite z ukazi kot v dokumentih razreda `article`.
+% Več o tem, kako se naredi naslovno stran, si preberite na naslovu na naslovu:
+% https://www.overleaf.com/learn/latex/Beamer
+% To stran preberite do vključno razdelka "Creating a table of contents".
+% Ukaz `\titlepage` deluje podobno kot ukaz `\maketitle`, ki ste ga že srečali.
+
+\begin{frame}
+    \frametitle[pausesections]{Kratek pregled}
+    \tableofcontents
+\end{frame}
+
+% Naloga 1.3.5: pripravite kazalo vsebine.
+% 1. Naslov prosojnice, s kazalom vsebine naj bo "Kratek pregled"
+% 2. S pomožnim parametrom `pausesections' (v oglatih oklepajih) 
+%    določite, da naj se kazalo vsebine odkriva postopoma.
+%    Poglejte, kako deluje ta ukaz.
+% 3. Ker ni videti preveč lepo, pomožni parameter zakomentirajte.
+
+\section{Paket \texttt{beamer}}
+\input{prosojnice/1-paket-beamer.tex}
+
+\section{Paketa \texttt{amsmath} in \texttt{amsfonts}}
+\input{prosojnice/2-paketa-amsmath-amsfonts.tex}
+
+\section[Matematika, 1. del\\\large{Analiza, logika, množice}]{Matematika, 1. del}
+
+\section{Stolpci in slike}
+
+\section{Paket \texttt{beamer} in tabele}
+
+\section[Matematika, 2. del\\\large{Zaporedja, algebra, grupe}]{Matematika, 2. del}
+
+
+
+\end{document}

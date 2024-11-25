@@ -1,0 +1,86 @@
+\begin{frame}{Matrike}
+	% Naloga 3.2.1:
+	% Oblikujte determinanto matrike. 
+	% Vsebina matrike je že pripravljena v komentarju spodaj.
+	Izračunajte determinanto
+
+		
+		\[\begin{vmatrix}
+			-1 & 4 & 4 & -2 \\
+			1 & 4 & 5 & -1 \\
+			1 & 4 & -2 & 2 \\
+			3 & 8 & 4 & 3 \\
+		\end{vmatrix}\]
+
+	V pomoč naj vam bo Overleaf dokumentacija o matrikah:
+	
+	\href{https://www.overleaf.com/learn/latex/Matrices}{\beamergotobutton{Matrices}}
+\end{frame}
+
+\begin{frame}{Okolje \texttt{align} in \texttt{align*}}
+	% Naloga 3.2.2:
+	% Okolje align je namenjeno poravnavi enačb.
+	% Če ne želimo, da se enačba oštevilči, uporabimo okolje align*.
+	% Nadomestite prikazni matematični način z okoljem align*.
+	% Na ustreznih mestih vključite & in \\, da bo enačba videti kot v rešitvi.
+	% Za pravilno postopno odkrivanje morate na enem mestu uporabiti ukaz `only',
+	% ter na dveh mestih ukaz `onslide'.
+	Dokaži \emph{binomsko formulo}: za vsaki realni števili $a$ in $b$ in za vsako naravno število $n$ velja
+	\begin{align*}
+	(a+b)^n = \only<1>\ldots 
+	&\onslide<2->{(a+b) (a+b) \dots (a+b)} \\
+	&\onslide<3>{= a^n + n a^{n-1} b + \dots + \binom{n}{k} a^{n-k} b^k + \dots + n a b^{n-1} + b^n} \\
+	&= \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k\\
+	\end{align*}
+	
+\end{frame}
+
+\begin{frame}{Še ena uporaba okolja \texttt{align*}}
+	% Naloga 3.2.3:
+	% Oblikujte spodnje enačbe z okoljem align*.
+	% Če naredite po en kurzor na začetku vsake vrstice, 
+	% boste lahko oblikovali vse tri vrstice hkrati.
+	Nariši grafe funkcij:
+	
+	
+	\begin{align*}
+		y &= x^2 - 3|x| + 2     &y &= 3 \sin(\pi+x) - 2 \\
+		y &= \log_2(x-2) + 3    &y &= 2 \sqrt{x^2+15} + 6 \\
+		y &= 2^{x-3} + 1        &y &= \cos(x-3) + \sin^2(x+1) \\
+	\end{align*}
+	
+\end{frame}
+
+\begin{frame}{Okolje \texttt{multline}}
+	% Naloga 3.2.4:
+	% Oblikujte spodnje enačbe z ustreznim okoljem,
+	% da bo enačba oblikovana kot v rešitvah.
+	Poišči vse rešitve enačbe
+	
+	
+	\begin{multline*}
+		(1+x+x^2) \cdot (1+x+x^2+x^3+\ldots+x^9+x^{10}) =\\
+		=(1+x+x^2+x^3+x^4+x^5+x^6)^2.
+	\end{multline*}
+	
+	
+\end{frame}
+
+\begin{frame}{Okolje \texttt{cases}}
+	% Naloga 3.2.5:
+	% Oblikujte spodnji funkcijski predpis z ustreznim okoljem,
+	% da oblikovan kot v rešitvah.
+	Dana je funkcija
+	\[
+		f(x,y)=
+		\begin{cases}
+			\frac{3x^2y-y^3}{x^2+y^2};& (x,y)\neq (0,0),\\
+			a;& (x,y)=(0,0)\\
+		\end{cases}
+	\]
+	\begin{itemize}
+		% ukaz displaystyle preklopi v prikazni način v vrstici. 
+	\item Določi $a$, tako da izračunaš limito \( \lim_{(x,y)\to(0,0)} f(x). \)
+	\item Izračunaj parcialna odvoda $f_x(x,y)$ in $f_y(x,y)$.
+	\end{itemize}
+\end{frame}
