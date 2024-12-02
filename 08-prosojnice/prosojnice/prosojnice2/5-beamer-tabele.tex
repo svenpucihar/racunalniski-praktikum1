@@ -1,0 +1,25 @@
+\begin{frame}{Odkrivanje tabele po vrsticah}
+	Včasih pride prav, da tabelo odkrivamo postopoma po vrsticah.
+	\begin{center}
+		\begin{tabular}{c|cccc}
+		   Oznaka & A & B & C & D \\ \hline
+		   X & 1 & 2 & 3 & 4 \\
+		   Y & 3 & 4 & 5 & 6 \\
+		   Z & 5 & 6 & 7 & 8
+		\end{tabular}
+	\end{center}
+\end{frame}
+ 
+
+\begin{frame}{Odkrivanje tabele po stolpcih}
+	Tabelo lahko odkrivamo tudi po stolpcih, čeprav ni najlažje.
+
+	\begin{center}
+		\begin{tabular}{c|>{\onslide<2->}cccc<{\onslide}}
+		   Oznaka & A & B & C & D \\ \hline
+		   X & 1 & 2 & 3 & 4 \\
+		   Y & 3 & 4 & 5 & 6 \\
+		   Z & 5 & 6 & 7 & 8
+		\end{tabular}
+	\end{center}
+\end{frame}
