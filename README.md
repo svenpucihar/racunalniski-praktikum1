@@ -34,3 +34,7 @@ v ukazno vrstico napišete `nano datoteka.txt`, ne pa `` `nano datoteka.txt` ``.
 ## Zahvala
 
 Prvo verzijo te igre je pripravil [Patrik Žnidaršič](https://github.com/k3ap).
+
+## Moj lastna spletna stran
+
+https://svenpucihar.github.io/ closed #1
